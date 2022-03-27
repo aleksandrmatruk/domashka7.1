@@ -61,7 +61,17 @@ public class Main {
         System.out.println();
 
         System.out.println("Задание 4");
+        String str = "abbcd";
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) != str.charAt(i-1)) {
+                System.out.println("Дублей нет!");
 
+            } else {
+                System.out.println("Дубль!" + str.charAt(i));
+
+
+            }
+        }
 
 
 
