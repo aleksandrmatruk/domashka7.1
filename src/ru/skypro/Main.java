@@ -43,6 +43,19 @@ public class Main {
             System.out.println("Потребуется дней: " + deliveryDay);
         }
     }
+    public static void metod_4(String str){
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) != str.charAt(i-1)) {
+                System.out.println("Дублей нет!");
+
+            } else {
+                System.out.println("Дубль!" + str.charAt(i));
+
+
+            }
+        }
+    }
+
 
 
 
@@ -61,17 +74,8 @@ public class Main {
         System.out.println();
 
         System.out.println("Задание 4");
-        String str = "abbcd";
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) != str.charAt(i-1)) {
-                System.out.println("Дублей нет!");
+        metod_4("aabcd");
 
-            } else {
-                System.out.println("Дубль!" + str.charAt(i));
-
-
-            }
-        }
 
 
 
