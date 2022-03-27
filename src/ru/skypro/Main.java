@@ -74,7 +74,7 @@ public class Main {
         System.out.println();
 
         System.out.println("Задание 4");
-        metod_4("aabcd");
+        metod_4("abcd");
 
 
 
