@@ -4,14 +4,13 @@ import java.time.LocalDate;
 
 public class Main {
 
-    public static void metod_1(int year){
+    public static void metod_1(int year) {
         if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             System.out.println(year + " год является високосным!");
-        }
-        else System.out.println(year + " год не является високосным!");
+        } else System.out.println(year + " год не является високосным!");
     }
 
-    public static void metod_2(int clientOS, int clientDeviceYear){
+    public static void metod_2(int clientOS, int clientDeviceYear) {
 
         int currentYear = LocalDate.now().getYear();
         if (clientDeviceYear <= 2014 || clientDeviceYear < currentYear) {
@@ -29,34 +28,36 @@ public class Main {
         }
     }
 
-    public static void metod_3(int deliveryDistance){
+    public static void metod_3(int deliveryDistance) {
         int deliveryDay = 1;
         if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней: " + deliveryDay);}
-
-        else {
-            if (deliveryDistance >20 && deliveryDistance < 60) { deliveryDay = deliveryDay+1;
-                System.out.println("Потребуется дней: " + deliveryDay);}
+            System.out.println("Потребуется дней: " + deliveryDay);
+        } else {
+            if (deliveryDistance > 20 && deliveryDistance < 60) {
+                deliveryDay = deliveryDay + 1;
+                System.out.println("Потребуется дней: " + deliveryDay);
+            }
         }
 
-        if (deliveryDistance >60 && deliveryDistance < 100) { deliveryDay = deliveryDay+2;
+        if (deliveryDistance > 60 && deliveryDistance < 100) {
+            deliveryDay = deliveryDay + 2;
             System.out.println("Потребуется дней: " + deliveryDay);
         }
     }
-    public static void metod_4(String str){
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) != str.charAt(i-1)) {
-                System.out.println("Дублей нет!");
 
-            } else {
+    public static void metod_4(String str) {
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.charAt(i) == str.charAt(i + 1)) {
                 System.out.println("Дубль!" + str.charAt(i));
+                break;
+            }
+            if (i == str.length() - 2) {
+                System.out.println("Дублей нет!");
 
 
             }
         }
     }
-
-
 
 
     public static void main(String[] args) {
@@ -74,12 +75,11 @@ public class Main {
         System.out.println();
 
         System.out.println("Задание 4");
-        metod_4("abcdd");
-
-
-
+        metod_4("abcd");
 
 
     }
+
 }
+
 
